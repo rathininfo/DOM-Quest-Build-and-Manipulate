@@ -1,4 +1,7 @@
+
+
 document.getElementById('donate-btn').addEventListener('click', function(){
+
     const donatedMoney = getDonateAmountValue('input-donate-money');
 
     if (isNaN(donatedMoney)) {
@@ -7,7 +10,7 @@ document.getElementById('donate-btn').addEventListener('click', function(){
     }
 
     if (donatedMoney === '') {
-        alert('Input cannot be empty.');
+        alert('Input field is empty');
         return;
     }
 
@@ -25,11 +28,16 @@ document.getElementById('donate-btn').addEventListener('click', function(){
         alert('You have not enough money to donate');
         return;
     }
-    
+    // donation amount will decrease 
     const totalAccountBalanced = mainBalance - totalDonate;
     document.getElementById('donation-account-Balance').innerText = totalAccountBalanced ;
+    // donation amount will increase 
     const showDonatedMoney = getTotalDonateAmount('total-donated-amount');
     const totalDonatedAmount = totalDonate + parseFloat(showDonatedMoney);
     document.getElementById('total-donated-amount').innerText = totalDonatedAmount ;  
+
+   // Function to open the modal
+    const modal = document.getElementById('my_modal_1');
+    modal.showModal(); // Open the modal
 
 })

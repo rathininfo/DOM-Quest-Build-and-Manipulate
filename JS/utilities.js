@@ -7,3 +7,4 @@ function getTotalDonateAmount(id){
     const totalDonateMoney = document.getElementById(id).innerText;
     return totalDonateMoney;
 }
+
