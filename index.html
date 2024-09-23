@@ -63,7 +63,7 @@
                 </div>
                 <div class="navbar-end flex items-center gap-2">
                   <img src="assets/coin.png" alt="">
-                    <p class=" font-bold text-sm text-gray-500"> 5500 BDT</p>
+                    <p id="donation-account-Balance" class=" font-bold text-sm text-gray-500"> 5500 <span>BDT</span></p>
                 </div>
               </div>
               <!-- End Nav Section -->
@@ -84,7 +84,9 @@
                 </div>
               </div>
               <div class="md:w-full lg:w-[50%]">
-                  <button class="bg-gray-100 px-4 py-2 rounded-md flex gap-2 items-center "><img src="assets/coin.png" alt=""><span>0 BDT</span></button>
+                  <button class="bg-gray-100 px-4 py-2 rounded-md flex gap-2 items-center ">
+                    <img src="assets/coin.png" alt="">
+                    <p id="total-donated-amount">0</p><span>BDT</span></button>
 
                   <div>
                     <h1 class="mt-4 font-semibold">Donate for Flood at Noakhali, Bangladesh</h1>
@@ -92,9 +94,9 @@
                   </div>
 
                   <label class="form-control ">
-                    <input type="text" placeholder="Write Donation Amount" class="input input-bordered w-full" />
+                    <input id="input-donate-money" type="text" placeholder="Write Donation Amount" class="input input-bordered w-full" />
                   </label> <br>
-                  <button class="btn w-full bg-buttonColor border-none text-base font-bold">Donate Now</button>
+                  <button id="donate-btn" class="btn w-full bg-buttonColor border-none text-base font-bold">Donate Now</button>
               </div>
           </div>
            </div>
@@ -134,7 +136,7 @@
 
         <div>
           <h1 class="mt-4 font-semibold">Donate for Flood at Noakhali, Bangladesh</h1>
-          <p class="my-4 "> The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.</p>
+          <p class="my-4 "> The recent Quota movement has resulted in numerous injuries and significant hardship for many individuals. Your support is crucial in providing medical assistance, rehabilitation, and necessary supplies to those affected. By contributing, you help ensure that injured individuals receive the care and support they need during this challenging time. </p>
         </div>
 
         <label class="form-control ">
@@ -145,6 +147,7 @@
 </div>
  </div>
     </main>
-
+   <script src="js/utilities.js"></script>
+   <script src="js/donation.js"></script>
 </body>
 </html>
