@@ -4,6 +4,9 @@ function handleDonation(event){
     const cardId = card.getAttribute('data-card-id');
     const donationInput = card.querySelector('.donation-input');
 
+    const heading = card.querySelector('.donate-title')
+    const headingText = heading.innerText;
+
     const currentDonationAmount = card.querySelector('.current-donation'); // Use querySelector
     let currentDonation = parseFloat(currentDonationAmount.innerText) || 0; // Handle NaN
 
@@ -37,13 +40,46 @@ function handleDonation(event){
     const totalAccountBalanced = mainBalance - totalDonate;
     document.getElementById('donation-account-Balance').innerText = totalAccountBalanced ;
     // donation amount will increase 
-const totalDonatedAmount = currentDonation + totalDonate;
-currentDonationAmount.innerText = totalDonatedAmount;
-    
+    const totalDonatedAmount = currentDonation + totalDonate;
+    currentDonationAmount.innerText = totalDonatedAmount;
 
+
+
+
+
+
+    // Add to donation history
+    const donationDate = new Date(); // Get the current date
+    addToHistory(donationAmount, headingText , donationDate); // Pass the details
+
+
+// Modify the addToHistory function to include the new parameters
+    function addToHistory(amount, reason, date) {
+    const historyList = document.getElementById('history');
+    const listItem = document.createElement('li');
+    listItem.classList.add('donation-entry')
+    listItem.innerHTML = `<span style="font-weight: bold;">${amount} Taka is Donated for ${reason} Bangladesh</span><br>Date: ${date.toString()}`; // Format the message
+    historyList.appendChild(listItem);
+}
+
+
+
+
+
+
+
+
+
+
+
+    
      // Function to open the modal
     const modal = document.getElementById('my_modal_1');
     modal.showModal(); // Open the modal
+
+
+
+    addToHistory(cardId, donationAmount);
 
 }
 
