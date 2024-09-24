@@ -1,43 +1,53 @@
+function handleDonation(event){
+    const balance = document.getElementById('donation-account-Balance');
+    const card = event.target.closest('.donate-card');
+    const cardId = card.getAttribute('data-card-id');
+    const donationInput = card.querySelector('.donation-input');
 
+    const currentDonationAmount = card.querySelector('.current-donation'); // Use querySelector
+    let currentDonation = parseFloat(currentDonationAmount.innerText) || 0; // Handle NaN
 
-document.getElementById('donate-btn').addEventListener('click', function(){
-
-    const donatedMoney = getDonateAmountValue('input-donate-money');
-
-    if (isNaN(donatedMoney)) {
-        alert('Please enter a valid number.');
+    const donationBalance  = balance.innerText;
+    const donationAmount = donationInput.value;
+   
+    if (isNaN(donationAmount)) {
+        alert('Invalid Donation Amount');
         return;
     }
 
-    if (donatedMoney === '') {
+    if (donationAmount === '') {
         alert('Input field is empty');
         return;
     }
 
-
-    else if(donatedMoney <= 0){
+    else if(donationAmount <= 0){
         alert('Please enter a positive number.');
         return;
     }
    
-    const accountBalance = getTotalDonateAmount('donation-account-Balance');
-    let mainBalance = parseFloat(accountBalance);
-    let totalDonate = parseFloat(donatedMoney);
+    let mainBalance = parseFloat(donationBalance);
+    let totalDonate = parseFloat(donationAmount);
 
     if(mainBalance < totalDonate){
         alert('You have not enough money to donate');
         return;
     }
+
     // donation amount will decrease 
     const totalAccountBalanced = mainBalance - totalDonate;
     document.getElementById('donation-account-Balance').innerText = totalAccountBalanced ;
     // donation amount will increase 
-    const showDonatedMoney = getTotalDonateAmount('total-donated-amount');
-    const totalDonatedAmount = totalDonate + parseFloat(showDonatedMoney);
-    document.getElementById('total-donated-amount').innerText = totalDonatedAmount ;  
+const totalDonatedAmount = currentDonation + totalDonate;
+currentDonationAmount.innerText = totalDonatedAmount;
+    
 
-   // Function to open the modal
+     // Function to open the modal
     const modal = document.getElementById('my_modal_1');
     modal.showModal(); // Open the modal
 
-})
+}
+
+document.querySelectorAll('.donate-button').forEach(button => {
+    button.addEventListener('click', handleDonation);
+});
+
