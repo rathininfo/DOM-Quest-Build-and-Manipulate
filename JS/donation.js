@@ -1,6 +1,5 @@
 function handleDonation(event) {
     // get info
-  const balance = document.getElementById("donation-account-Balance");
   const card = event.target.closest(".donate-card");
   const cardId = card.getAttribute("data-card-id");
   const donationInput = card.querySelector(".donation-input");
@@ -10,8 +9,8 @@ function handleDonation(event) {
 
   const currentDonationAmount = card.querySelector(".current-donation"); // Use querySelector
   let currentDonation = parseFloat(currentDonationAmount.innerText) || 0; // Handle NaN
-
-  const donationBalance = balance.innerText;
+  const balance = getBalance("donation-account-Balance");
+  const donationBalance = balance;
   const donationAmount = donationInput.value;
 
   if (isNaN(donationAmount)) {

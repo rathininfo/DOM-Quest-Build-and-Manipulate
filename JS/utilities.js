@@ -1,18 +1,30 @@
+function getBalance(id){
+  const accountBalance = document.getElementById(id).innerText;
+  return accountBalance;
+}
+
+
+//function all card section and history section hidden and showing function
 function showSectionById(id) {
   document.getElementById("allCards").classList.add("hidden");
   document.getElementById("history-section").classList.add("hidden");
   document.getElementById(id).classList.remove("hidden");
 }
 
+// history button
 document.getElementById("history-btn").addEventListener("click", function () {
   const historyBtn = showSectionById("history-section");
   historyBtn.classList.add("bg-buttonColor");
 });
-
+// donation button
 document.getElementById("donation-btn").addEventListener("click", function () {
   showSectionById("allCards");
 });
 
+//   button function
+// blog btn and home button function
+
+// Donation and history btn Color change
 document.querySelectorAll(".btn-color-change").forEach((button) => {
   button.addEventListener("click", function () {
     // Remove 'bg-buttonColor' from all buttons

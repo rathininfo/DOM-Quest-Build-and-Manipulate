@@ -48,40 +48,17 @@
 
 </head>
 <body class="font-Lexend top-2">
-    <header class=" sticky top-0 z-10 backdrop-filter backdrop-blur-lg bg-opacity-80 shadow-lg">
+    <header class=" container mx-auto sticky top-0 z-10 backdrop-filter backdrop-blur-lg bg-opacity-80 shadow-lg">
       <!-- Start Nav Section -->
-            <div class="navbar backdrop-filter backdrop-blur-lg bg-opacity-80 bg-[#F9F7F3] pb-10 pt-6 px-6 md:px-12 lg:px-36">
-                <div class="navbar-start ">
+            <div class="flex justify-between items-center navbar backdrop-filter backdrop-blur-lg bg-opacity-80 bg-[#F9F7F3] md:pb-2 lg:pb-10 lg:pt-6 px-6 md:px-12 lg:px-36">
+                <div>
                     <button onclick="goToBlog()" id="blog-btn" class="btn bg-buttonColor">Blog</button>
-                  <div class="dropdown hidden">
-                    <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="h-5 w-5"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor">
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M4 6h16M4 12h16M4 18h7" />
-                      </svg>
-                    </div>
-                    <ul
-                      tabindex="0"
-                      class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-                      <li><a>Homepage</a></li>
-                      <li><a>Portfolio</a></li>
-                      <li><a>About</a></li>
-                    </ul>
-                  </div>
                 </div>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
                     <img src="assets/logo.png" alt="">
-                  <p class="font-semibold text-sm hidden md:block">Donate Bangladesh</p>
+                  <p class="font-semibold text-sm hidden md:block ">Donate Bangladesh</p>
                 </div>
-                <div class="navbar-end flex items-center gap-2">
+                <div class="flex items-center gap-2">
                   <img src="assets/coin.png" alt="">
                     <p id="donation-account-Balance" class=" font-bold text-sm text-gray-500"> 5500 <span>BDT</span></p>
                 </div>
@@ -93,13 +70,13 @@
       </div>
 
     </header>
-    <main class="max-w-[1440px] mx-auto">
+    <main class="container mx-auto">
             <div id="allCards" class="">
         <!-- card 1 -->
             <div class="lg:px-36 my-6">
               <div class="donate-card flex flex-col md:flex-row justify-center border-2 shadow-md rounded-lg p-6 gap-5 mx-6 " data-card-id ="1">
                 <div class="md:w-full lg:w-[50%]">
-                  <div class="lg:w-[500px] lg:h-[384px]">
+                  <div class=" lg:h-[384px]">
                     <img class="w-full h-full" src="assets/noakhali.png" alt="">
                   </div>
                 </div>
@@ -110,7 +87,7 @@
 
                     <div>
                       <h1 class="donate-title mt-4 font-semibold">Donate for Flood at Noakhali, Bangladesh</h1>
-                      <p class="my-4 "> The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.</p>
+                      <p class="my-4 "> The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.support the flood victims in Noakhali </p>
                     </div>
 
                     <label class="form-control ">
@@ -124,7 +101,7 @@
           <div class="lg:px-36 my-6">
             <div class="donate-card flex flex-col md:flex-row justify-center border-2 shadow-md rounded-lg p-6 gap-5 mx-6 " data-card-id="2">
               <div class="md:w-full lg:w-[50%]">
-                <div class="lg:w-[500px] lg:h-[384px]">
+                <div class=" lg:h-[384px]">
                   <img class="w-full h-full" src="assets/feni.png" alt="">
                 </div>
               </div>
@@ -149,7 +126,7 @@
           <div class="lg:px-36 my-6">
             <div class="donate-card flex flex-col md:flex-row justify-center border-2 shadow-md rounded-lg p-6 gap-5 mx-6" data-card-id="3">
               <div class="md:w-full lg:w-[50%]">
-                <div class="lg:w-[500px] lg:h-[384px]">
+                <div class="lg:h-[384px]">
                   <img class="w-full h-full" src="assets/quota-protest.png" alt="">
                 </div>
               </div>
@@ -175,7 +152,7 @@
 <section>
 
   <!-- history section start -->
-  <section id="history-section" class="max-w-[1440px] mx-auto hidden">
+  <section id="history-section" class="max-w-[1440px] mx-auto hidden mt-16">
     <div class="mx-36">
       <ul id="history">
 
@@ -185,7 +162,7 @@
 
   <!-- Open the modal using ID.showModal() method -->
 <dialog id="my_modal_1" class="modal">
-  <div class="modal-box text-center ">
+  <div class="modal-box text-center py-10">
     <h3 class="font-bold text-4xl">Congrates!</h3>
     <p class="py-4">You Have Donate Form Human Kind</p>
     <p class="font-bold text-2xl mb-4">Seccessfully</p>
