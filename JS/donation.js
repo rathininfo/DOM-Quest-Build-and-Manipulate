@@ -44,10 +44,6 @@ function handleDonation(event){
     currentDonationAmount.innerText = totalDonatedAmount;
 
 
-
-
-
-
     // Add to donation history
     const donationDate = new Date(); // Get the current date
     addToHistory(donationAmount, headingText , donationDate); // Pass the details
@@ -62,23 +58,9 @@ function handleDonation(event){
     historyList.appendChild(listItem);
 }
 
-
-
-
-
-
-
-
-
-
-
-    
      // Function to open the modal
     const modal = document.getElementById('my_modal_1');
     modal.showModal(); // Open the modal
-
-
-
     addToHistory(cardId, donationAmount);
 
 }
