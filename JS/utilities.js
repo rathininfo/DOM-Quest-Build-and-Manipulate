@@ -25,3 +25,14 @@ document.querySelectorAll('.btn-color-change').forEach(button => {
         this.classList.add('bg-buttonColor');
     });
 });
+
+function GoToHomePage()
+{
+  window.location = 'index.html';   
+}
+
+function goToBlog()
+{
+  window.location = 'blog.html';   
+}
+
