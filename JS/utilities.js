@@ -21,9 +21,6 @@ document.getElementById("donation-btn").addEventListener("click", function () {
   showSectionById("allCards");
 });
 
-//   button function
-// blog btn and home button function
-
 // Donation and history btn Color change
 document.querySelectorAll(".btn-color-change").forEach((button) => {
   button.addEventListener("click", function () {
